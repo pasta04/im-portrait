@@ -25,9 +25,9 @@ $(() => {
     console.log('setText');
 
     left = Number($('#left').val());
-    top = $('#top').val();
-    mid_left = $('#mid_left').val();
-    mid_top = $('#mid_top').val();
+    top = Number($('#top').val());
+    mid_left = Number($('#mid_left').val());
+    mid_top = Number($('#mid_top').val());
 
     offset_left = Number($('#offset_left').val());
     offset_top = Number($('#offset_top').val());
@@ -70,7 +70,7 @@ $(() => {
     console.log('medium');
     // medium
     const midCanvas = document.getElementById('body_meidum');
-    const middata = bigctx.getImageData(mid_left, mid_top, 682, 1013);
+    const middata = bigctx.getImageData(mid_left, mid_top, 862, 1013);
     midCanvas.getContext('2d').putImageData(middata, 0, 0);
 
     // small
