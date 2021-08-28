@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Idol Manager Portrait Helper</title>
+    <script src="./jquery.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <div>
+        <!-- image -->
+        <div style="display: flex">
+          <div style="margin: 10px">
+            <div>big.png</div>
+            <canvas id="body_big" style="border: 1px solid; height: 500px" width="1024" height="1500"></canvas>
+          </div>
+          <div style="margin: 10px">
+            <div>medium.png</div>
+            <canvas id="body_meidum" style="border: 1px solid; width: 300px" width="682" height="1013"></canvas>
+          </div>
+          <div style="margin: 10px">
+            <div>small.png</div>
+            <canvas id="body_small" style="border: 1px solid; width: 120px" width="360" height="360"></canvas>
+          </div>
+        </div>
+      </div>
+      <div>
+        <input type="file" id="edit_image" />
+      </div>
+      <!-- control -->
+      <div>
+        <div>
+          <div style="display: flex">
+            <div style="margin: 5px">
+              <label>offset Left</label>
+              <input type="number" id="offset_left" name="param" value="0" />
+            </div>
+            <div style="margin: 5px">
+              <label>offset top</label>
+              <input type="number" id="offset_top" name="param" value="0" />
+            </div>
+            <div style="margin: 5px">
+              <label>zoom (%)</label>
+              <input type="number" id="multiply" name="param" value="100" />
+            </div>
+          </div>
+          <hr />
+          <div style="display: flex">
+            <div style="margin: 5px">
+              <label>left</label>
+              <input type="number" id="left" name="param" value="330" />
+            </div>
+            <div style="margin: 5px">
+              <label>top</label>
+              <input type="number" id="top" name="param" value="160" />
+            </div>
+            <div style="margin: 5px">
+              <label>mid_left</label>
+              <input type="number" id="mid_left" name="param" value="160" />
+            </div>
+            <div style="margin: 5px">
+              <label>mid_top</label>
+              <input type="number" id="mid_top" name="param" value="100" />
+            </div>
+          </div>
+        </div>
+        <hr />
+        <!-- result -->
+        <div>
+          <div>param.json</div>
+          <textarea id="json_result" style="width: 600px; height: 200px"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
