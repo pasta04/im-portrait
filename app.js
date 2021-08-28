@@ -6,13 +6,13 @@ $(() => {
   let img;
 
   /** @type {number} */
-  let left = 330;
+  let left;
   /** @type {number} */
-  let top = 160;
+  let top;
   /** @type {number} */
-  let mid_left = 160;
+  let mid_left;
   /** @type {number} */
-  let mid_top = 100;
+  let mid_top;
   /** @type {number} */
   let offset_left = 0;
   /** @type {number} */
@@ -75,7 +75,7 @@ $(() => {
 
     // small
     const smallCanvas = document.getElementById('body_small');
-    const smalldata = bigctx.getImageData(left, top, 360, 360);
+    const smalldata = bigctx.getImageData(left, top, smallCanvas.width, smallCanvas.height);
     smallCanvas.getContext('2d').putImageData(smalldata, 0, 0);
   };
 
